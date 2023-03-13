@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #2196F3;
+    border-radius: 5rem;
+}
+
+.home{
+    padding:2rem 7%;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem 7%;
+    border-bottom: white;
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 6rem;
+    border-radius: 6px;
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:#fff;
+}
+
+.header .navbar a:hover{
+    border-bottom: .1rem solid white;
+}
+
+#menu-btn{
+    display: none;
+}
+
+.home{
+    margin-top: 60px;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    /*background: url(./img/img.jpg) no-repeat center;*/
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color:#fff;
+}
+.w3-third > div{
+    margin: 10px;
+}
+.features-content{
+    display: flex;
+}
+.w3-third > div:hover{
+    transition: 1s ease;
+}
+.features-content h2:hover{
+    text-decoration: underline;
+}
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding:1rem 0;
+    color:#eee;
+}
+.whatsapp_float{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    left: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    background-color: #25d366;
+}
+.back-to-top-button{
+    cursor: pointer;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+
+
+/* media queries  */
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:1.5rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+        font-size: 30px;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:100%; right: -100%;
+        width: 100%;
+        height: calc(100vh - 9.5rem);
+        background-color: #2196F3!important;
+        transition: 1s all;
+    }
+    .header .navbar button{
+        display: block;
+        margin-left: 43%;
+    }
+    .header .navbar.active{
+        right:0;
+    }
+
+    .header .navbar a{
+        display: block;
+        margin:1.5rem;
+        padding:.5rem;
+        font-size: 2rem;
+    }
+    .home{
+        background-position: left;
+        height: calc(20vh - 9.5rem);
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+
+    .home .content p{
+        font-size: 1.5rem;
+    }
+    /*#Services .w3-third{*/
+    /*    display: block;*/
+    /*}*/
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
